@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMeals, clearMeals } from './features/mealslice';
+import { route,routes } from 'react-router-dom'
 
 function App() {
+
+  <routes>
+    <h1>google</h1>
+    <route path= "/" element route= {<home />}/>
+    <route path= "/about" element/>
+  </routes>
   const dispatch = useDispatch();
   const meals = useSelector((state) => state.meals.items);
   const mealStatus = useSelector((state) => state.meals.status);
